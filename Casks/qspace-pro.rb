@@ -1,9 +1,9 @@
 cask "qspace-pro" do
-  version "2.6.4"
-  sha256 "d9a589f1fd5b0a44132c62e96fbfcbcdddd826670bb9576a9cd5eec6ae5c5ea4"
+  version "2.6.6"
+  sha256 "b3d81a96b27079d2acca0551414b2781fb7fc143d0a9b926388b62948033c484"
 
   url "https://cdn.awehunt.com/qs/rel/QSpace%20Pro_V#{version}.dmg"
-  
+
   name "QSpace Pro"
   name "QSpace 专业版"
   desc "A better Finder, it's well worth a try !"
