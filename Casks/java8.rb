@@ -1,14 +1,14 @@
 home = ENV["HOME"]
 cask 'java8' do
-  version '8u291,b10:d7fc238d0cbf4b0dac67be84580cfb4b'
-  sha256 '632c4fbbec39846651c65f5c93d2035567046fd60bc0e58ef431218dffa8cc15'
+  version '8u301,b09:d3c52aa6bfa54d3ca74e617f18309292'
+  sha256 '4dabf4ff3db87ea3e7a4122c96577e4891492af10fbe42a7a3005c2b826ca37f'
   url "file://#{home}/Downloads/jdk-#{version.before_comma}-macosx-x64.dmg"
   name 'Oracle Java 8 Standard Edition Development Kit'
   homepage 'https://www.oracle.com/technetwork/java/javase/overview/index.html'
 
   depends_on macos: '>= :yosemite'
 
-  pkg 'JDK 8 Update 291.pkg'
+  pkg 'JDK 8 Update 301.pkg'
 
   uninstall pkgutil: "com.oracle.jdk#{version.before_comma}",
             delete:  [
