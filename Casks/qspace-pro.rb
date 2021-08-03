@@ -1,6 +1,6 @@
 cask "qspace-pro" do
-  version "2.6.6"
-  sha256 "b3d81a96b27079d2acca0551414b2781fb7fc143d0a9b926388b62948033c484"
+  version "2.6.8"
+  sha256 "27745fb4989d3549992e2f49facb9607bc269d5128a246cbe39088d47ef03b28"
 
   url "https://cdn.awehunt.com/qs/rel/QSpace%20Pro_V#{version}.dmg"
 
