@@ -6,7 +6,7 @@ cask 'java8' do
   name 'Oracle Java 8 Standard Edition Development Kit'
   homepage 'https://www.oracle.com/technetwork/java/javase/overview/index.html'
 
-  depends_on macos: '>= :yosemite'
+  depends_on macos: '>= :el_capitan'
 
   pkg 'JDK 8 Update 333.pkg'
 
