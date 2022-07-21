@@ -1,12 +1,12 @@
 cask "oracle-jdk-lts" do
   arch = Hardware::CPU.intel? ? "x64" : "aarch64"
 
-  version "17.0.3.1"
+  version "17.0.4"
 
   if Hardware::CPU.intel?
-    sha256 "4a3692cd015ec8a3037934baa1234bbfbcdfafd615c15b4d09e7a29832322e9a"
+    sha256 "976c9757fe06c367cc351b4abba7a5bdba877cee686dbd818f1365792e634e8b"
   else
-    sha256 "57d674c777bb7c839efd58a9e1b5e1aba2f39adc2a64ad8916c48f08fdbaff43"
+    sha256 "c0c22c194fc79e65137a727e3dc68e487317d279778ab5e9a0c2faf8caaefd82"
   end
 
   url "https://download.oracle.com/java/#{version.major}/archive/jdk-#{version}_macos-#{arch}_bin.dmg"
@@ -29,3 +29,4 @@ cask "oracle-jdk-lts" do
     license "https://www.oracle.com/downloads/licenses/no-fee-license.html"
   end
 end
+
