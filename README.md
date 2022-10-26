@@ -12,7 +12,3 @@
 
 安装oracle jdk lts版本，homebrew-cask仓库没有维护lts版本。
 
-## qspace-pro
-
-原作者没有支持brew，自行支持一下方便管理。
-
