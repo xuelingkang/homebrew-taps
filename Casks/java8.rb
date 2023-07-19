@@ -3,10 +3,10 @@ cask 'java8' do
   version '8u381,b09:8c876547113c4e4aab3c868e9e0ec572'
 
   if Hardware::CPU.intel?
-    sha256 "036feba4f26bbb5e7a6e8f29f565a5f3bb47d9199ef7af7f06fc13244f2bfb6a"
+    sha256 "c3447081763bb06dc16beadcbc2bf027a79e8dc5043673e2ca296b96e0f55d89"
     url "file://#{home}/Downloads/jdk-#{version.before_comma}-macosx-x64.dmg"
   else
-    sha256 "236ddcd225bede9ae5257e3c85edb7270584ea8e7a40bf612f4a88015cbf234d"
+    sha256 "d13a2c4b4fe135e59bc25df67ee04ec3ad72888fd66add4a54403f11372eca03"
     url "file://#{home}/Downloads/jdk-#{version.before_comma}-macosx-aarch64.dmg"
   end
 
