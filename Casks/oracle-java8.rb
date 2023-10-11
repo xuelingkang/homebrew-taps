@@ -1,5 +1,5 @@
 home = ENV["HOME"]
-cask 'java8' do
+cask 'oracle-java8' do
   version '8u381,b09:8c876547113c4e4aab3c868e9e0ec572'
 
   if Hardware::CPU.intel?

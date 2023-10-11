@@ -1,4 +1,4 @@
-cask "oracle-jdk-lts" do
+cask "oracle-java17" do
   arch = Hardware::CPU.intel? ? "x64" : "aarch64"
 
   version "17.0.8"
