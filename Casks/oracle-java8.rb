@@ -1,36 +1,34 @@
 home = ENV["HOME"]
-cask 'oracle-java8' do
-  version '8u381,b09:8c876547113c4e4aab3c868e9e0ec572'
+cask "oracle-java8" do
+  version "8u391,b13:b291ca3e0c8548b5a51d5a5f50063037"
 
-  if Hardware::CPU.intel?
-    sha256 "c3447081763bb06dc16beadcbc2bf027a79e8dc5043673e2ca296b96e0f55d89"
-    url "file://#{home}/Downloads/jdk-#{version.before_comma}-macosx-x64.dmg"
-  else
-    sha256 "d13a2c4b4fe135e59bc25df67ee04ec3ad72888fd66add4a54403f11372eca03"
-    url "file://#{home}/Downloads/jdk-#{version.before_comma}-macosx-aarch64.dmg"
-  end
+  arch arm: "aarch64", intel: "x64"
+  url "file://#{home}/Downloads/jdk-#{version.before_comma}-macosx-#{arch}.dmg"
 
-  name 'Oracle Java 8 Standard Edition Development Kit'
-  homepage 'https://www.oracle.com/technetwork/java/javase/overview/index.html'
+  sha256 arm:   "b901a514c76c640973d503de2bb6b95cde830ae9681945efade64ea4f87a3906",
+         intel: "720f5ee1bd1d95ac400dc2ee22ff8d4ab261ee1f09ad8e056b2938c8d6db8998"
 
-  depends_on macos: '>= :el_capitan'
+  name "Oracle Java 8 Standard Edition Development Kit"
+  homepage "https://www.oracle.com/technetwork/java/javase/overview/index.html"
 
-  pkg 'JDK 8 Update 381.pkg'
+  depends_on macos: ">= :el_capitan"
+
+  pkg "JDK 8 Update 391.pkg"
 
   uninstall pkgutil: "com.oracle.jdk#{version.before_comma}",
             delete:  [
-                       '/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin',
-                       '/Library/PreferencePanes/JavaControlPanel.prefPane',
+                       "/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin",
+                       "/Library/PreferencePanes/JavaControlPanel.prefPane",
                      ]
 
   zap trash: [
-               '~/Library/Application Support/Oracle/Java',
-               '~/Library/Application Support/com.oracle.java.JavaAppletPlugin.plist',
-               '~/Library/Application Support/com.oracle.javadeployment.plist',
+               "~/Library/Application Support/Oracle/Java",
+               "~/Library/Application Support/com.oracle.java.JavaAppletPlugin.plist",
+               "~/Library/Application Support/com.oracle.javadeployment.plist",
              ]
 
   caveats do
-    license 'https://www.oracle.com/technetwork/java/javase/terms/license/javase-license.html'
+    license "https://www.oracle.com/technetwork/java/javase/terms/license/javase-license.html"
   end
 end
 
