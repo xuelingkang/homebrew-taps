@@ -1,19 +1,19 @@
 home = ENV["HOME"]
 cask "oracle-java8" do
-  version "8u401,b10:4d245f941845490c91360409ecffb3b4"
+  version "8u411,b09:43d62d619be4e416215729597d70b8ac"
 
   arch arm: "aarch64", intel: "x64"
   url "file://#{home}/Downloads/jdk-#{version.before_comma}-macosx-#{arch}.dmg"
 
-  sha256 arm:   "a52331b9a88d0582e3dd24f950cab32a29390be024adbe5d557e25ae90d78d31",
-         intel: "b7f30ff4607f4dff97538a6ad087107930b459d496645e0f40dbc1a735148f95"
+  sha256 arm:   "23900b0501f350637d8f826a62ff7806cd787a05c75141638b114891c33dd110",
+         intel: "8bb1e9362891c4361d9aecd79f04b3eec7a2b07e95efb0f385fb29d94d40a7ce"
 
   name "Oracle Java 8 Standard Edition Development Kit"
   homepage "https://www.oracle.com/technetwork/java/javase/overview/index.html"
 
   depends_on macos: ">= :el_capitan"
 
-  pkg "JDK 8 Update 401.pkg"
+  pkg "JDK 8 Update 411.pkg"
 
   uninstall pkgutil: "com.oracle.jdk#{version.before_comma}",
             delete:  [
