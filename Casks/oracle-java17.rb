@@ -1,9 +1,11 @@
+home = ENV["HOME"]
 cask "oracle-java17" do
+  version "17.0.13"
   arch arm: "aarch64", intel: "x64"
 
-  version "17.0.13"
   sha256 :no_check
 
+  url "file://#{home}/Downloads/jdk-#{version}_macos-#{arch}_bin.dmg"
   url "https://download.oracle.com/java/#{version.major}/archive/jdk-#{version}_macos-#{arch}_bin.dmg"
   name "Oracle Java Standard Edition Development Kit"
   desc "JDK from Oracle"
