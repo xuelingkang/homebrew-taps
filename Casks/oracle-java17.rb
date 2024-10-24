@@ -1,7 +1,7 @@
 cask "oracle-java17" do
   arch arm: "aarch64", intel: "x64"
 
-  version "17.0.12"
+  version "17.0.13"
   sha256 :no_check
 
   url "https://download.oracle.com/java/#{version.major}/archive/jdk-#{version}_macos-#{arch}_bin.dmg"
