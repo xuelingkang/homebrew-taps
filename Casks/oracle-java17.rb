@@ -6,7 +6,6 @@ cask "oracle-java17" do
   sha256 :no_check
 
   url "file://#{home}/Downloads/jdk-#{version}_macos-#{arch}_bin.dmg"
-  url "https://download.oracle.com/java/#{version.major}/archive/jdk-#{version}_macos-#{arch}_bin.dmg"
   name "Oracle Java Standard Edition Development Kit"
   desc "JDK from Oracle"
   homepage "https://www.oracle.com/java/technologies/downloads/"
