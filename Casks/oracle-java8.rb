@@ -1,6 +1,6 @@
 home = ENV["HOME"]
 cask "oracle-java8" do
-  version "8u431"
+  version "8u441"
 
   arch arm: "aarch64", intel: "x64"
   url "file://#{home}/Downloads/jdk-#{version}-macosx-#{arch}.dmg"
@@ -12,7 +12,7 @@ cask "oracle-java8" do
 
   depends_on macos: ">= :el_capitan"
 
-  pkg "JDK 8 Update 431.pkg"
+  pkg "JDK 8 Update 441.pkg"
 
   uninstall pkgutil: "com.oracle.jdk#{version}",
             delete:  [

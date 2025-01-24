@@ -1,6 +1,6 @@
 home = ENV["HOME"]
 cask "oracle-java17" do
-  version "17.0.13"
+  version "17.0.14"
   arch arm: "aarch64", intel: "x64"
 
   sha256 :no_check
